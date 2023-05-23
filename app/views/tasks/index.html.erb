@@ -1,0 +1,5 @@
+<h1>I'm the tasks index.</h1>
+<ul><% @tasks.each do |task| %>
+  <li><%= task[:completed] %> | <a href="/tasks/<%= task[:id] %>"><%= task[:title] %></a> | <%= task[:details] %></li>
+<% end %></ul>
+<a href="/tasks/new">Add a new Task</a>
